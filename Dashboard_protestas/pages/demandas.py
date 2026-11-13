@@ -74,24 +74,24 @@ fig_artic = aplicar_estilo(fig_artic)
 layout = html.Div([
     html.Div("Inicio | Trabajo e ingresos | Demandas", className="breadcrumbs"),
     html.Div([
-        html.H1("Demandas"),
-        html.P("Análisis de los reclamos que articulan cada conflicto y su nivel de densidad.", style={"fontSize": "1.1rem", "color": "#4B5563"}),
+        html.H1("¿Qué reclamaron? Ejes y densidad de demandas"),
+        html.P("Qué se reclamó en cada conflicto y cuántas demandas se combinaron por episodio. Chubut (n=121) y Jujuy (n=66).", style={"fontSize": "1.1rem", "color": "#4B5563"}),
 
         html.Div([
             html.H4("Mensajes clave", className="mensajes-clave-title"),
             dbc.Row([
-                dbc.Col(html.Div("Jujuy articula un doble eje: político-legal (59,1%) y salarial (59,1%).", className="mensaje-card"), width=4),
-                dbc.Col(html.Div("Chubut tiene un eje dominante ambiental-territorial (33,1%) y uno secundario salarial (23,1%).", className="mensaje-card destacado"), width=4),
-                dbc.Col(html.Div("Los eventos de Jujuy promedian 1,48 demandas; los de Chubut, 0,95.", className="mensaje-card"), width=4),
+                dbc.Col(html.Div("En Jujuy, los ejes político-legal y salarial empatan como principales: ambos aparecen en el 59,1% de los episodios.", className="mensaje-card"), width=4),
+                dbc.Col(html.Div("En Chubut predomina el eje ambiental-territorial (33,1%), seguido por el salarial (23,1%).", className="mensaje-card destacado"), width=4),
+                dbc.Col(html.Div("Los episodios de Jujuy combinan más demandas por evento (1,48 vs. 0,95 en Chubut).", className="mensaje-card"), width=4),
             ])
         ], className="mensajes-clave-wrapper"),
 
-        chart_box("Distribución de demandas", "Porcentaje de eventos que incluyen cada tipo de reclamo.", fig_dem),
-        chart_box("Articulación de demandas", "Cantidad de demandas superpuestas en un mismo evento.", fig_artic),
+        chart_box("Ejes de reclamo", "Porcentaje de eventos que incluyen cada tipo de reclamo.", fig_dem),
+        chart_box("¿Cuántas demandas por episodio?", "Cantidad de demandas superpuestas en un mismo evento.", fig_artic),
 
         html.Div([
             html.H5("El hallazgo del doble eje"),
-            html.P("Los eventos jujeños son eventos densos en términos de demandas; los chubutenses son eventos puros de reclamo único. Esto refleja dos lógicas distintas de organización de la protesta.")
+            html.P("En términos descriptivos, los episodios de Jujuy son densos: combinan varios ejes en un mismo evento. Los de Chubut son puros: tienden al reclamo único. La interpretación de dos lógicas organizativas es una hipótesis consistente con los datos, no un hallazgo cerrado.Limitación. La variable n_demandas cuenta demandas codificadas en prensa; no equivale a la cantidad de consignas efectivamente planteadas en la calle.")
         ], className="hallazgo-box"),
 
         html.Div([

@@ -29,10 +29,9 @@ def card_tema(titulo, descripcion, href, color):
     )
 
 layout = html.Div([
-    html.H1("Protestas en Chubut y Jujuy"),
+    html.H1("Dos provincias, dos respuestas estatales"),
     html.P(
-        "Un análisis comparado de dos ciclos de protesta y la respuesta estatal. "
-        "Chubut (oct 2021 - ene 2022) y Jujuy (jun - ago 2023).",
+        "Un análisis comparado de la respuesta estatal a dos ciclos de protesta: Chubut (oct 2021 – ene 2022, n=121) y Jujuy (jun – ago 2023, n=66). Los datos combinan codificación asistida por LLM con revisión manual.",
         className="text-muted mb-5"
     ),
 
@@ -40,22 +39,22 @@ layout = html.Div([
 
     dbc.Row([
         card_tema("Panorama general",
-                  "KPIs, serie temporal y contexto de los dos conflictos.",
+                  "Cuántos episodios hubo, cuándo se concentraron y qué revela la comparación.",
                   "/panorama", "#7BB4C2"),
         card_tema("Repertorios y actores",
-                  "Qué se hizo y quiénes lo hicieron en cada provincia.",
+                  "Qué tácticas se usaron y qué actores las sostuvieron.",
                   "/repertorios", "#9D9ECE"),
         card_tema("Demandas",
-                  "Qué se reclamó y cómo se articuló en cada caso.",
+                  "Qué se reclamó y cuántas demandas se combinaron por episodio.",
                   "/demandas", "#2E86AB"),
         card_tema("Cruces",
-                  "Actores × demandas × represión. El corazón del comparativo.",
+                  "Qué actor sostuvo qué reclamo",
                   "/cruces", "#A23B72"),
         card_tema("Represión",
-                  "Intervención estatal, corte de ruta y selectividad represiva.",
+                  "Cómo respondió el Estado y a quién castigó.",
                   "/represion", "#E53935"),
         card_tema("Métodos",
-                  "Definiciones, limitaciones y uso de ACLED.",
+                  "Cómo se construyeron los datos y qué no se puede concluir.",
                   "/metodos", "#6B7280"),
     ]),
 
