@@ -88,7 +88,6 @@ El objetivo es aportar evidencia empírica comparada sobre **cómo, cuándo y co
 ├── requirements.txt
 └── README.md
 
-
 ---
 
 ## 📊 Datos
@@ -179,23 +178,14 @@ python app.py
 
 ## ⚙️ Instalación
 
-# 1. Clonar
+1. Clonar
 git clone https://github.com/Federico19921/Repertorios-de-respuesta-estatal-ante-protestas.git
 cd Repertorios-de-respuesta-estatal-ante-protestas
 
-# 2. Entorno virtual (recomendado)
+2. Entorno virtual (recomendado)
 python -m venv venv
-source venv/bin/activate        # Linux/macOS
-# venv\Scripts\activate         # Windows
+source venv/bin/activate        Linux/macOS
+venv\Scripts\activate         Windows
 
-# 3. Dependencias
+3. Dependencias
 pip install -r requirements.txt
-
-@misc{llanes2026repertorios,
-  author       = {Llanes, Federico Nicolás},
-  title        = {Repertorios de respuesta estatal ante protestas:
-                  Chubut (2021–2022) y Jujuy (2023)},
-  year         = {2026},
-  publisher    = {GitHub},
-  howpublished = {\url{https://github.com/Federico19921/Repertorios-de-respuesta-estatal-ante-protestas}}
-}
