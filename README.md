@@ -16,7 +16,7 @@
 
 ---
 
-## 📑 Tabla de contenidos
+## Tabla de contenidos
 
 - [Sobre el proyecto](#-sobre-el-proyecto)
 - [Preguntas de investigación](#-preguntas-de-investigación)
@@ -35,7 +35,7 @@
 
 ---
 
-## 🎯 Sobre el proyecto
+## Sobre el proyecto
 
 Este repositorio reúne el **corpus, los datos codificados, los scripts de procesamiento y los análisis** de una investigación sobre los **repertorios de respuesta estatal frente a episodios de protesta** en dos provincias argentinas:
 
@@ -50,7 +50,7 @@ El objetivo es aportar evidencia empírica comparada sobre **cómo, cuándo y co
 
 ---
 
-## ❓ Preguntas de investigación
+## Preguntas de investigación
 
 1. ¿Qué **repertorios de acción colectiva** predominaron en cada ciclo de protesta?
 2. ¿Qué **demandas** articularon los actores movilizados y cómo se combinaron?
@@ -60,7 +60,7 @@ El objetivo es aportar evidencia empírica comparada sobre **cómo, cuándo y co
 
 ---
 
-## 🗂️ Estructura del repositorio
+## Estructura del repositorio
 
 ```text
 .
@@ -93,7 +93,7 @@ El objetivo es aportar evidencia empírica comparada sobre **cómo, cuándo y co
 
 ```
 
-## 📊 Datos
+## Datos
 
 El dataset principal (`data/processed/eventos.csv`) contiene **un registro por episodio de protesta** codificado a partir de noticias periodísticas. Está organizado en seis bloques temáticos:
 
@@ -112,7 +112,7 @@ El dataset principal (`data/processed/eventos.csv`) contiene **un registro por e
 
 ---
 
-## 🔬 Metodología
+## Metodología
 
 La estrategia metodológica combina **codificación automatizada asistida por LLM** con **auditoría y revisión manual**:
 
@@ -127,23 +127,22 @@ El diseño busca **balancear escalabilidad y rigor**, dejando trazabilidad compl
 
 ---
 
-## 📓 Notebooks
+## Notebooks
 
 | # | Notebook | Propósito |
 |---|----------|-----------|
 | 00 | `homogenizado.ipynb` | Unificación de esquemas Chubut–Jujuy |
 | 01 | `limpieza_chubut.ipynb` | Limpieza y preparación del caso Chubut |
-| 02 | `EDA_Chubut.ipynb` | Análisis exploratorio: actores, repertorios, demandas, respuesta estatal |
-| 03 | `EDA_Jujuy.ipynb` | Análisis exploratorio del caso Jujuy |
-| 04 | `Analisis_comparativo_Chubut_Jujuy.ipynb` | Comparación sistemática entre ambos ciclos |
-| 05 | `datos_acled.ipynb` | Procesamiento de datos ACLED |
-| 06 | `analisis_contextual_ACLED_2020-2024.ipynb` | Contextualización temporal y territorial del conflicto |
-
-Se recomienda abrirlos en el orden numérico: cada notebook asume la salida del anterior.
+| 02 | `limpieza_jujuy.ipynb` | Limpieza y preparación del caso Jujuy |
+| 03 | `EDA_Chubut.ipynb` | Análisis exploratorio: actores, repertorios, demandas, respuesta estatal |
+| 04 | `EDA_Jujuy.ipynb` | Análisis exploratorio del caso Jujuy |
+| 05 | `Analisis_comparativo_Chubut_Jujuy.ipynb` | Comparación sistemática entre ambos ciclos |
+| 06 | `datos_acled.ipynb` | Procesamiento de datos ACLED |
+| 07 | `analisis_contextual_ACLED_2020-2024.ipynb` | Contextualización temporal y territorial del conflicto |
 
 ---
 
-## ⚙️ Pipeline de codificación (`scr/`)
+## Pipeline de codificación (`scr/`)
 
 | Script | Función |
 |--------|---------|
@@ -152,11 +151,11 @@ Se recomienda abrirlos en el orden numérico: cada notebook asume la salida del 
 | **`auditoria.py`** | Validación automática de la base codificada: nulos, rangos, valores fuera de catálogo, duplicados. |
 | **`revision_manual.py`** | Interfaz de revisión asistida para corregir casos marcados por la auditoría. |
 
-> ⚠️ `ArmadorCorpus.py` requiere una **API key de Groq**. Se recomienda definirla como variable de entorno (`GROQ_API_KEY`) en lugar de hardcodearla. Si vas a forkear el repo, **no subas tu clave**.
+> `ArmadorCorpus.py` requiere una **API key de Groq**. Se recomienda definirla como variable de entorno (`GROQ_API_KEY`) en lugar de hardcodearla. Si vas a forkear el repo, **no subas tu clave**.
 
 ---
 
-## 🖥️ Dashboard interactivo
+## Dashboard interactivo
 
 Aplicación desarrollada con **Dash + Plotly + Dash Bootstrap Components** para explorar los datos sin necesidad de programar.
 
@@ -179,7 +178,7 @@ python app.py
 # → http://127.0.0.1:8050/
 ```
 
-## ⚙️ Instalación
+## Instalación
 
 1. Clonar
 git clone https://github.com/Federico19921/Repertorios-de-respuesta-estatal-ante-protestas.git
