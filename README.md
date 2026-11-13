@@ -181,13 +181,19 @@ python app.py
 ## Instalación
 
 1. Clonar
+```
 git clone https://github.com/Federico19921/Repertorios-de-respuesta-estatal-ante-protestas.git
 cd Repertorios-de-respuesta-estatal-ante-protestas
+```
 
-3. Entorno virtual (recomendado)
+2. Entorno virtual (recomendado)
+```
 python -m venv venv
 source venv/bin/activate      Linux/macOS
 venv\Scripts\activate       Windows
+```
 
-4. Dependencias
+3. Dependencias
+```
 pip install -r requirements.txt
+```
