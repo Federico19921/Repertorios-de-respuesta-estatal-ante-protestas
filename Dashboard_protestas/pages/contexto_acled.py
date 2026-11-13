@@ -95,25 +95,25 @@ fig_tasas = aplicar_estilo(fig_tasas)
 layout = html.Div([
     html.Div("Inicio | Trabajo e ingresos | Contexto Nacional", className="breadcrumbs"),
     html.Div([
-        html.H1("¿Cómo se comparan con el contexto nacional?"),
-        html.P("Los casos provinciales se contrastan con la base ACLED nacional (2020–2024). ACLED prioriza eventos con víctimas fatales y subrepresenta protestas pacíficas: por eso se usa como contexto, no como fuente principal.", style={"fontSize": "1.1rem", "color": "#4B5563"}),
+        html.H1("Contexto nacional de la protesta"),
+        html.P("Para dimensionar los casos de Chubut y Jujuy, se consultó la base ACLED para todo el país en el período 2020-2024.", style={"fontSize": "1.1rem", "color": "#4B5563"}),
 
         html.Div([
             html.H4("Mensajes clave", className="mensajes-clave-title"),
             dbc.Row([
-                dbc.Col(html.Div("Según ACLED, Argentina registró 12.474 protestas entre 2020 y 2024.", className="mensaje-card"), width=4),
-                dbc.Col(html.Div("Solo el 2,92% de esos eventos involucraron represión estatal según la codificación de ACLED.", className="mensaje-card"), width=4),
-                dbc.Col(html.Div("Jujuy duplica el promedio nacional de represión (6,12% vs. 2,92%); Chubut está muy por debajo (1,11%). En números absolutos, ACLED registra solo 18 eventos de represión en cada provincia: la comparación es indicativa, no concluyente.", className="mensaje-card destacado"), width=4),
+                dbc.Col(html.Div("Argentina registró 12.474 protestas entre 2020 y 2024.", className="mensaje-card"), width=4),
+                dbc.Col(html.Div("Solo el 2,92% de esos eventos involucraron represión estatal.", className="mensaje-card"), width=4),
+                dbc.Col(html.Div("Jujuy tuvo una tasa de represión del 6,12% (más del doble del promedio), mientras que Chubut registró 1,11% (muy por debajo).", className="mensaje-card destacado"), width=4),
             ])
         ], className="mensajes-clave-wrapper"),
 
-        chart_box("Protestas y represión en Argentina, 2020–2024 (n de eventos)", "Cantidad de eventos en Argentina (2020-2024).", fig_anual),
-        chart_box("Provincias con más eventos de represión (top 10, ACLED)", "Top 10 provincias. En rojo, los casos de Chubut y Jujuy.", fig_ranking),
-        chart_box("% de protestas con represión: nacional vs. Chubut vs. Jujuy", "Porcentaje de eventos con represión sobre el total de protestas.", fig_tasas),
+        chart_box("Evolución anual de protestas y represión", "Cantidad de eventos en Argentina (2020-2024).", fig_anual),
+        chart_box("Ranking de provincias por represión", "Top 10 provincias. En rojo, los casos de Chubut y Jujuy.", fig_ranking),
+        chart_box("Tasas de represión comparadas", "Porcentaje de eventos con represión sobre el total de protestas.", fig_tasas),
 
         html.Div([
             html.H5("Por qué ACLED sirve como contexto, pero no como fuente principal"),
-            html.P("ACLED prioriza eventos violentos con víctimas fatales; para protestas pacíficas o de baja intensidad, su cobertura es estructuralmente menor que la de fuentes locales. En los períodos analizados, ACLED registró solo 8 eventos de represión para Chubut y Jujuy combinadas, todos ya presentes en la base propia. Por eso se usa como contexto nacional, no como base de análisis.")
+            html.P("ACLED es una base global que prioriza eventos violentos con víctimas fatales. Para protestas pacíficas o de baja intensidad, su cobertura es estructuralmente menor que la de fuentes locales. En los períodos analizados, ACLED solo registró 8 eventos de represión para Chubut y Jujuy combinadas. Por eso se usó la base propia como fuente principal, y ACLED solo para mostrar el contexto nacional.")
         ], className="hallazgo-box"),
 
         html.Div([

@@ -58,24 +58,24 @@ layout = html.Div([
     
     html.Div([
         # 2. Título principal
-        html.H1("Dos ciclos, dos estrategias"),
+        html.H1("Panorama de las protestas"),
         
         # 3. Texto introductorio
         html.P(
-            "Chubut (oct 2021 – ene 2022, n=121) y Jujuy (jun – ago 2023, n=66) " \
-            "son dos ciclos de conflicto con desenlaces opuestos: " \
-            "derogación de la ley minera en un caso, sostenimiento de la reforma con represión en el otro. " \
-            "Esta página resume el volumen, la temporalidad y el nivel de represión de cada ciclo."
+            "Este análisis compara dos ciclos de protesta fundamentales en la Argentina reciente: "
+            "el conflicto por la ley de zonificación minera en Chubut (octubre 2021 - enero 2022) "
+            "y el conflicto por la reforma constitucional en Jujuy (junio - agosto 2023). "
+            "El objetivo es observar cómo reaccionó el Estado provincial frente a cada caso."
         ),
         
         # 4. Sección de Mensajes Clave (Estilo Argendata)
         html.Div([
             html.H4("Mensajes clave", className="mensajes-clave-title"),
             dbc.Row([
-                dbc.Col(html.Div("Chubut registró casi el doble de episodios que Jujuy (121 vs. 66), pero en un período más largo (4 meses vs. 3).", className="mensaje-card"), width=3),
-                dbc.Col(html.Div("La represión fue más frecuente en Jujuy (7,6% vs. 4,1%). La diferencia se sostiene aun ajustando por cobertura (ver Represión).", className="mensaje-card destacado"), width=3),
-                dbc.Col(html.Div("El corte de ruta fue el repertorio con mayor tasa de represión en ambos casos (Jujuy: 28,6%; Chubut: 7,7%).", className="mensaje-card"), width=3),
-                dbc.Col(html.Div("Los episodios de Jujuy articulan más demandas por evento (1,48 vs. 0,95 en Chubut).", className="mensaje-card"), width=3),
+                dbc.Col(html.Div("Chubut registró 121 eventos, casi el doble que Jujuy (66).", className="mensaje-card"), width=3),
+                dbc.Col(html.Div("La represión en Jujuy fue más intensa: 7,6% de los eventos, contra 4,1% en Chubut.", className="mensaje-card destacado"), width=3),
+                dbc.Col(html.Div("El corte de ruta fue el repertorio más castigado en ambas provincias.", className="mensaje-card"), width=3),
+                dbc.Col(html.Div("Los eventos de Jujuy fueron más densos: 1,48 demandas por evento vs 0,95.", className="mensaje-card"), width=3),
             ])
         ], className="mensajes-clave-wrapper"),
         
@@ -87,14 +87,14 @@ layout = html.Div([
             ], className="chart-header"),
             html.P("Evolución de la cantidad de eventos registrados por mes en cada provincia.", className="chart-subtitle"),
             html.Div(dcc.Graph(figure=fig_serie, config={'displayModeBar': False}), className="chart-body"),
-            html.Div("Fuente: base propia (n=187 episodios; 121 Chubut, 66 Jujuy) · Período: oct 2021 – ago 2023 · Codificación asistida por LLM + revisión manual.", className="chart-footer")
+            html.Div("Fuente: Base propia de eventos codificados a partir de noticias.", className="chart-footer")
         ], className="chart-container"),
         
         # 6. Hallazgo final
         html.Div([
-            html.H5("Hallazgo"),
-            html.P("Lectura comparada. Los datos son compatibles con dos estrategias provinciales distintas: desescalada política en Chubut (derogación de la ley de zonificación) y sostenimiento con represión en Jujuy (reforma constitucional mantenida, con uso de fuerza y judicialización). " \
-            "Limitación. Esta lectura se basa en los episodios cubiertos por prensa; no permite afirmar intencionalidad estatal, solo asociación entre contexto y repertorio de respuesta.")
+            html.H5("El hallazgo central"),
+            html.P("Chubut optó por la desescalada política (derogación de la ley), mientras que Jujuy "
+                   "sostuvo una estrategia de disciplinamiento (mantener la reforma y reprimir).")
         ], className="hallazgo-box"),
 
         # 7. Botones de navegación

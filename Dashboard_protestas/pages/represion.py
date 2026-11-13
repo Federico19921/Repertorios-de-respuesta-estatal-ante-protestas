@@ -140,33 +140,33 @@ else:
 layout = html.Div([
     html.Div("Inicio | Trabajo e ingresos | Represión", className="breadcrumbs"),
     html.Div([
-        html.H1("¿Cómo respondió el Estado?"),
-        html.P("Qué repertorios desplegó el Estado frente a las protestas, a qué actores castigó con más frecuencia y qué lugar ocupó la justicia.", style={"fontSize": "1.1rem", "color": "#4B5563"}),
+        html.H1("Represión y respuesta estatal"),
+        html.P("Análisis de cómo respondió el Estado en cada conflicto, a quién castigó y qué herramientas usó.", style={"fontSize": "1.1rem", "color": "#4B5563"}),
 
         html.Div([
             html.H4("Mensajes clave", className="mensajes-clave-title"),
             dbc.Row([
-                dbc.Col(html.Div("Jujuy registró más represión (7,6% vs. 4,1%) y fue la única provincia con disuasión exclusiva (3,0%).", className="mensaje-card"), width=3),
+                dbc.Col(html.Div("Jujuy tuvo más represión (7,6%) y disuasión exclusiva (3,0%).", className="mensaje-card"), width=3),
                 dbc.Col(html.Div("El corte de ruta fue el repertorio más castigado: 28,6% en Jujuy vs 7,7% en Chubut.", className="mensaje-card destacado"), width=3),
-                dbc.Col(html.Div("En Jujuy, las comunidades originarias fueron el actor con mayor tasa de represión (27,8%), por encima de docentes (7,3%).", className="mensaje-card"), width=3),
+                dbc.Col(html.Div("Las comunidades originarias fueron el actor más reprimido en Jujuy (27,8%).", className="mensaje-card"), width=3),
                 dbc.Col(html.Div("En Jujuy, el 100% de las causas judiciales fueron por cortes de ruta.", className="mensaje-card"), width=3),
             ])
         ], className="mensajes-clave-wrapper"),
 
-        chart_box("Tipo de intervención estatal (% de episodios)", "Distribución de los tipos de intervención del Estado en cada provincia.", fig_interv),
-        chart_box("Tasa de represión por repertorio (% de episodios de ese repertorio)", "Porcentaje de eventos de cada repertorio que sufrieron represión.", fig_acc),
+        chart_box("Intervención estatal", "Distribución de los tipos de intervención del Estado en cada provincia.", fig_interv),
+        chart_box("Represión por tipo de acción", "Porcentaje de eventos de cada repertorio que sufrieron represión.", fig_acc),
         
         html.H2("¿A quién se reprimió?"),
-        chart_box("Tasa de represión por actor", "Porcentaje de eventos de cada actor que sufrieron represión.", fig_actor),
-        chart_box("Tasa de represión por eje de demanda", "Porcentaje de eventos de cada demanda que sufrieron represión.", fig_dem),
+        chart_box("Represión por actor", "Porcentaje de eventos de cada actor que sufrieron represión.", fig_actor),
+        chart_box("Represión por demanda", "Porcentaje de eventos de cada demanda que sufrieron represión.", fig_dem),
 
         html.H2("El uso de la justicia"),
-        chart_box("Judicialización (% de episodios con datos)", "Porcentaje de eventos con causas judiciales sobre el total de eventos con datos.", fig_jud_tasa),
-        chart_box("Repertorios con causas judiciales (n de episodios)", "Tipos de acción que terminaron en causas judiciales.", fig_jud_acc),
+        chart_box("Tasa de judicialización", "Porcentaje de eventos con causas judiciales sobre el total de eventos con datos.", fig_jud_tasa),
+        chart_box("Repertorios judicializados", "Tipos de acción que terminaron en causas judiciales.", fig_jud_acc),
 
         html.Div([
             html.H5("La represión como estrategia selectiva"),
-            html.P("En Jujuy, la represión se dirigió con más intensidad hacia comunidades originarias (27,8%) que hacia docentes (7,3%), pese a que los docentes fueron el actor más movilizado. La justicia operó como herramienta de disciplinamiento focalizada: todas las causas registradas correspondieron a cortes de ruta. En Chubut, las causas se distribuyeron entre manifestaciones, marchas, destrozos y cortes, sin un patrón único. Lectura. Los datos son compatibles con un uso selectivo de la represión en Jujuy y reactivo en Chubut. Limitación. El n de causas judiciales es bajo; los porcentajes deben leerse como indicio, no como estimación robusta. La tasa ajustada por cobertura corrige solo parcialmente el sesgo.")
+            html.P("En Jujuy, la represión no fue indiscriminada: se dirigió con mayor intensidad hacia comunidades originarias (27,8%) que hacia docentes (7,3%), a pesar de que los docentes fueron el actor más movilizado. Además, la justicia se usó como herramienta de disciplinamiento: el 71,4% de los eventos con datos terminaron en causas judiciales, y el 100% de ellas fueron por cortes de ruta. En Chubut, en cambio, las 7 causas judiciales se distribuyeron entre manifestaciones, marchas, destrozos y cortes, mostrando una respuesta legal más reactiva y menos focalizada.")
         ], className="hallazgo-box"),
 
         html.Div([

@@ -64,14 +64,14 @@ fig_matriz = aplicar_estilo(fig_matriz)
 layout = html.Div([
     html.Div("Inicio | Trabajo e ingresos | Cruces", className="breadcrumbs"),
     html.Div([
-        html.H1("¿Quién sostuvo qué reclamo?"),
-        html.P("Qué actor articuló cada tipo de demanda en cada provincia. Cada celda indica cuántos episodios combinan ese actor con esa demanda; el color señala la intensidad (azul: Chubut, rojo: Jujuy).", style={"fontSize": "1.1rem", "color": "#4B5563"}),
+        html.H1("Cruce de actores y demandas"),
+        html.P("Análisis de qué actores sostienen qué reclamos en cada conflicto.", style={"fontSize": "1.1rem", "color": "#4B5563"}),
 
         html.Div([
             html.H4("Mensajes clave", className="mensajes-clave-title"),
             dbc.Row([
-                dbc.Col(html.Div("En Jujuy, docentes y organizaciones sociales son el núcleo de los ejes político-legal y salarial." , className="mensaje-card"), width=6),
-                dbc.Col(html.Div("En Chubut, vecinos y colectivos ambientales articulan el eje ambiental-territorial.", className="mensaje-card destacado"), width=6),
+                dbc.Col(html.Div("En Jujuy, los docentes y las organizaciones sociales concentran las demandas políticas y salariales.", className="mensaje-card"), width=6),
+                dbc.Col(html.Div("En Chubut, los vecinos y los colectivos ambientales son el núcleo de la demanda territorial.", className="mensaje-card destacado"), width=6),
             ])
         ], className="mensajes-clave-wrapper"),
 
@@ -84,7 +84,7 @@ layout = html.Div([
 
         html.Div([
             html.H5("El cruce de actores y demandas"),
-            html.P("(1) En Chubut, el eje ambiental-territorial es sostenido por vecinos y colectivos ambientales. (2) En Jujuy, docentes y organizaciones sociales articulan los ejes político-legal y salarial. (3) Las comunidades indígenas sostienen demandas de derechos específicos y territoriales en ambas provincias, pero con más peso en Jujuy. Limitación. Las celdas suman episodios, no actores únicos: un mismo actor puede aparecer en varios episodios. No debe leerse como tamaño de organización.")
+            html.P("Mientras que en Chubut el reclamo territorial (ambiental) es sostenido principalmente por vecinos y colectivos ambientales, en Jujuy los docentes son el actor protagónico que articula demandas salariales y políticas. Las comunidades indígenas, por su parte, sostienen demandas de derechos específicos y territoriales.")
         ], className="hallazgo-box"),
 
         html.Div([

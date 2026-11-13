@@ -93,28 +93,25 @@ fig_dens = aplicar_estilo(fig_dens)
 layout = html.Div([
     html.Div("Inicio | Trabajo e ingresos | Repertorios", className="breadcrumbs"),
     html.Div([
-        html.H1("¿Cómo protestaron? Tácticas y actores"),
-        html.P("Qué tácticas desplegaron y qué actores las sostuvieron en Chubut (n=121) y Jujuy (n=66). Los porcentajes indican la proporción de episodios en los que aparece cada táctica o actor.", style={"fontSize": "1.1rem", "color": "#4B5563"}),
+        html.H1("Repertorios y actores"),
+        html.P("Análisis de las formas de acción desplegadas y la composición de los actores en cada conflicto.", style={"fontSize": "1.1rem", "color": "#4B5563"}),
 
         html.Div([
             html.H4("Mensajes clave", className="mensajes-clave-title"),
             dbc.Row([
-                dbc.Col(html.Div("En Jujuy predominan el paro y el corte de ruta (21,2% cada uno); en Chubut, la marcha y el acto.", className="mensaje-card"), width=4),
-                dbc.Col(html.Div("Chubut desplegó repertorios expresivos (escraches, destrozos) ausentes en Jujuy, lo que sugiere un repertorio más heterogéneo.", className="mensaje-card destacado"), width=4),
-                dbc.Col(html.Div("Los episodios de Jujuy convocan más actores por evento (1,77 vs. 1,01 en Chubut).", className="mensaje-card"), width=4),
+                dbc.Col(html.Div("Jujuy se inclina por el paro (21,2%) y el corte (21,2%).", className="mensaje-card"), width=4),
+                dbc.Col(html.Div("Chubut incluye formas expresivas exclusivas como escraches y destrozos.", className="mensaje-card destacado"), width=4),
+                dbc.Col(html.Div("Los eventos de Jujuy son más densos: 1,77 actores por evento vs 1,01.", className="mensaje-card"), width=4),
             ])
         ], className="mensajes-clave-wrapper"),
 
-        chart_box("Tácticas desplegadas (% de episodios que las incluyen)", fig_rep),
-        chart_box("Actores movilizados (% de episodios en los que participan)", fig_act),
-        chart_box("Densidad por episodio (promedio de actores y demandas)", fig_dens),
+        chart_box("Repertorios por provincia", "Porcentaje de eventos que incluyen cada tipo de acción.", fig_rep),
+        chart_box("Actores participantes", "Porcentaje de eventos en los que participa cada actor.", fig_act),
+        chart_box("Densidad del evento", "Promedio de actores y demandas por evento en cada provincia.", fig_dens),
 
         html.Div([
             html.H5("El hallazgo de la densidad"),
-            html.P("Chubut funciona como un conflicto de agregación: muchos episodios simples, con un actor predominante por evento. " \
-            "Jujuy funciona como un conflicto de articulación: menos episodios, pero con más actores y demandas combinadas por evento. " \
-            "Limitación. La densidad se mide por codificación de menciones en prensa; puede reflejar estilo periodístico además de la " \
-            "organización real del conflicto.")
+            html.P("Los eventos de Jujuy son estructuralmente más densos. Chubut funciona como un conflicto de agregación (muchos eventos simples); Jujuy como un conflicto de articulación (menos eventos pero más densos).")
         ], className="hallazgo-box"),
 
         html.Div([
