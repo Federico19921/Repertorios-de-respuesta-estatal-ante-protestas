@@ -41,8 +41,8 @@ Este repositorio reúne el **corpus, los datos codificados, los scripts de proce
 
 | Caso | Período | Contexto |
 |------|---------|----------|
-| **Chubut** | oct. 2021 – ene. 2022 | Conflicto docente y salarial con fuerte represión provincial |
-| **Jujuy** | jun. – ago. 2023 | Conflicto socioambiental y por derechos indígenas en la Puna |
+| **Chubut** | oct. 2021 – ene. 2022 | Conflicto ley de zonificación minera |
+| **Jujuy** | jun. – ago. 2023 | Conflicto reforma judicial |
 
 El proyecto adopta como unidad de análisis el **episodio de acción colectiva contenciosa discontinua** (Tilly & Tarrow) y codifica sistemáticamente la **interacción Estado–protesta** a partir de fuentes periodísticas.
 
