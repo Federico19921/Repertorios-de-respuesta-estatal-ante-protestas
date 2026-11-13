@@ -26,7 +26,7 @@
 - [Notebooks](#-notebooks)
 - [Pipeline de codificación (`scr/`)](#-pipeline-de-codificación-scr)
 - [Dashboard interactivo](#-dashboard-interactivo)
-- [Instalación](#️-instalación)
+- [Instalación](-instalación)
 - [Uso rápido](#-uso-rápido)
 - [Reproducibilidad](#-reproducibilidad)
 - [Citación](#-citación)
@@ -161,13 +161,13 @@ Aplicación desarrollada con **Dash + Plotly + Dash Bootstrap Components** para 
 
 **Secciones:**
 
-- 🏠 **Panorama** — métricas generales, distribución temporal y territorial de los episodios.
-- 🥁 **Repertorios** — tácticas de protesta y su frecuencia relativa por caso.
-- 📣 **Demandas** — principales ejes de reclamación y su combinación.
-- 🔀 **Cruces** — relaciones bivariadas entre actores, repertorios y demandas.
-- 🚨 **Represión** — presencia policial, uso de la fuerza, detenciones y judicialización.
-- 🌐 **Contexto ACLED** — datos contextuales 2020–2024.
-- 📚 **Métodos** — libro de códigos y decisiones metodológicas.
+- **Panorama** — métricas generales, distribución temporal y territorial de los episodios.
+- **Repertorios** — tácticas de protesta y su frecuencia relativa por caso.
+- **Demandas** — principales ejes de reclamación y su combinación.
+- **Cruces** — relaciones bivariadas entre actores, repertorios y demandas.
+- **Represión** — presencia policial, uso de la fuerza, detenciones y judicialización.
+- **Contexto ACLED** — datos contextuales 2020–2024.
+- **Métodos** — libro de códigos y decisiones metodológicas.
 
 **Ejecución local:**
 
@@ -197,3 +197,60 @@ venv\Scripts\activate       #Windows
 ```
 pip install -r requirements.txt
 ```
+
+## Uso rápido
+
+**Explorar los datos ya codificados:**
+
+```python
+import pandas as pd
+df = pd.read_csv("data/processed/eventos.csv")
+df.groupby("provincia")["es_represion"].mean()
+```
+
+**Codificar un nuevo corpus de noticias:**
+
+```bash
+export GROQ_API_KEY="tu_api_key"
+python scr/ArmadorCorpus.py --input data/raw/noticias.xlsx --output data/processed/codificacion.json
+python scr/JSON_a_Excel.py --input data/processed/codificacion.json --output data/processed/eventos.xlsx
+python scr/auditoria.py --input data/processed/eventos.xlsx
+```
+
+## Reproducibilidad
+
+Para replicar los resultados del paper:
+
+1. Clonar el repositorio y crear el entorno (ver [Instalación](#instalación)).
+2. Ejecutar los notebooks.
+3. Los gráficos y tablas del análisis comparativo se regeneran íntegramente desde `data/processed/eventos.csv` y `data/acled/`.
+
+## Citación
+
+Si utilizás este repositorio, los datos o el dashboard en una publicación académica:
+
+```bibtex
+@misc{llanes2026repertorios,
+  author       = {Llanes, Federico Nicolás},
+  title        = {Repertorios de respuesta estatal ante protestas:
+                  Chubut (2021–2022) y Jujuy (2023)},
+  year         = {2026},
+  publisher    = {GitHub},
+  howpublished = {\url{https://github.com/Federico19921/Repertorios-de-respuesta-estatal-ante-protestas}}
+}
+```
+
+---
+
+## Autor
+
+**Federico Nicolás Llanes**
+GitHub: [@Federico19921](https://github.com/Federico19921)
+
+---
+
+## Licencia
+
+Distribuido bajo licencia **MIT**. Ver [`LICENSE`](LICENSE) para más detalles.
+
+Los datos de **ACLED** incluidos en `data/acled/` se rigen por los [términos de uso de ACLED](https://acleddata.com/terms-of-use/) y no por la licencia MIT de este repositorio.
