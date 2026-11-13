@@ -189,8 +189,8 @@ cd Repertorios-de-respuesta-estatal-ante-protestas
 2. Entorno virtual (recomendado)
 ```
 python -m venv venv
-source venv/bin/activate      Linux/macOS
-venv\Scripts\activate       Windows
+source venv/bin/activate      #Linux/macOS
+venv\Scripts\activate       #Windows
 ```
 
 3. Dependencias
