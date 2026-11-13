@@ -62,33 +62,36 @@ El objetivo es aportar evidencia empírica comparada sobre **cómo, cuándo y co
 
 ## 🗂️ Estructura del repositorio
 
-├── Dashboard_protestas/ # Aplicación web interactiva (Dash + Plotly)
-│ ├── app.py # Punto de entrada del dashboard
-│ ├── pages/ # Módulos por sección (Panorama, Repertorios, ...)
-│ ├── assets/ # CSS / imágenes
-│ └── requirements.txt
+```text
+.
+├── Dashboard_protestas/          # Aplicación web interactiva (Dash + Plotly)
+│   ├── app.py                    # Punto de entrada del dashboard
+│   ├── pages/                    # Módulos por sección (Panorama, Repertorios, ...)
+│   ├── assets/                   # CSS / imágenes
+│   └── requirements.txt
 ├── data/
-│ ├── raw/ # Excels originales con enlaces a noticias
-│ ├── processed/
-│ │ └── eventos.csv # Base codificada final (>40 variables)
-│ └── acled/ # Datos contextuales ACLED (2020–2024)
+│   ├── raw/                      # Excels originales con enlaces a noticias
+│   ├── processed/
+│   │   └── eventos.csv           # Base codificada final (>40 variables)
+│   └── acled/                    # Datos contextuales ACLED (2020–2024)
 ├── notebooks/
-│ ├── 00_homogenizado.ipynb
-│ ├── 01_limpieza_chubut.ipynb
-│ ├── 02_EDA_Chubut.ipynb
-│ ├── 03_EDA_Jujuy.ipynb
-│ ├── 04_Analisis_comparativo_Chubut_Jujuy.ipynb
-│ ├── 05_datos_acled.ipynb
-│ └── 06_analisis_contextual_ACLED_2020-2024.ipynb
-├── scr/ # Scripts de scraping y codificación
-│ ├── ArmadorCorpus.py
-│ ├── JSON_a_Excel.py
-│ ├── auditoria.py
-│ └── revision_manual.py
+│   ├── 00_homogenizado.ipynb
+│   ├── 01_limpieza_chubut.ipynb
+│   ├── 02_EDA_Chubut.ipynb
+│   ├── 03_EDA_Jujuy.ipynb
+│   ├── 04_Analisis_comparativo_Chubut_Jujuy.ipynb
+│   ├── 05_datos_acled.ipynb
+│   └── 06_analisis_contextual_ACLED_2020-2024.ipynb
+├── scr/                          # Scripts de scraping y codificación
+│   ├── ArmadorCorpus.py
+│   ├── JSON_a_Excel.py
+│   ├── auditoria.py
+│   └── revision_manual.py
 ├── requirements.txt
 └── README.md
-
 ---
+
+```
 
 ## 📊 Datos
 
