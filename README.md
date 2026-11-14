@@ -108,8 +108,6 @@ El dataset principal (`data/processed/eventos.csv`) contiene **un registro por e
 | **Respuesta estatal** | `respuesta_estatal`, `presencia_policial`, `accionar_policial`, `tipo_intervencion_estatal`, `uso_fuerza`, `heridos`, `detenciones`, `judicializacion`, `intervencion_armonizada`, `es_represion` | Repertorio estatal desplegado |
 | **Contexto del conflicto** | `escala`, `intensidad`, `disrupcion`, `amenaza_politica`, `resultado_episodio` | Dimensiones contextuales del episodio |
 
-> El libro de códigos completo se documenta en `notebooks/00_homogenizado.ipynb`.
-
 ---
 
 ## Metodología
